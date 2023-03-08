@@ -6,7 +6,7 @@ read -p "Enter the name of the application: " app_name
 read -p "Enter your surname: " surname
 
 
-log_file="/$surname.log"
+log_file="var/log/$surname.log"
 touch "$log_file"
 sudo chmod -R 777 /
 

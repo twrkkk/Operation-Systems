@@ -2,7 +2,7 @@
 
 mkdir -p var/log
 
-read -p "Enter the name of the application: " app_name
+app_name=$1
 read -p "Enter your surname: " surname
 
 log_file="var/log/$surname.log"

@@ -1,13 +1,16 @@
 #!/bin/bash
 
 mkdir -p usr/bin 
-touch usr/bin/1
+touch 1
+mv 1 ~/usr/bin
 chmod g+x usr/bin/1
 
 echo "Write surname"; read surname
 mkdir -p usr/lib/$surname
-touch usr/lib/$surname/2.lib
+touch 2.lib
+mv 2.lib ~/usr/lib/$surname
 
 mkdir -p etc/$surname
-touch etc/$surname/3.conf
-echo $0 > etc/$surname/3.conf
+touch 3.conf
+mv 3.conf ~/etc/$surname
+echo $(realpath -s $0) > etc/$surname/3.conf
